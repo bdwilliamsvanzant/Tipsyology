@@ -16,15 +16,9 @@ const routes: Routes = [
       loadChildren: '../tab5/tab5.module#Tab5PageModule'
       },
       {
-        path: 'tab6',
-        loadChildren: '../tab6/tab6.module#Tab6PageModule'
+        path: 'tab6'
         }
     ]
-  },
-  {
-    path: '',
-    redirectTo: 'tab6',
-    pathMatch: 'full'
   }
 ]
 

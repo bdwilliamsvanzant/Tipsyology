@@ -12,19 +12,18 @@ const routes: Routes = [
     component: Tab3Page,
     children: [
       {
-      path: 'tab5',
-      loadChildren: '../tab5/tab5.module#Tab5PageModule'
+        path: 'tab5',
+        loadChildren: '../tab5/tab5.module#Tab5PageModule'
       },
       {
         path: 'tab6',
         loadChildren: '../tab6/tab6.module#Tab6PageModule'
-        }
+      }
     ]
   },
   {
     path: '',
-    redirectTo: 'tab3',
-    pathMatch: 'full'
+    redirectTo: 'tab3/tab5'
   }
 ]
 
@@ -34,7 +33,6 @@ const routes: Routes = [
     CommonModule,
     FormsModule,
     RouterModule.forChild(routes)
-    //RouterModule.forChild([{ path: '', component: Tab3Page }])
   ],
   declarations: [Tab3Page]
 })

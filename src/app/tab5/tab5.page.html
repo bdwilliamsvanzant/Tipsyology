@@ -1,25 +1,95 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>
-      Tipsyology
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
-
-<ion-content>
-    <ion-tabs>
-        <!-- Tab bar -->
-        <ion-tab-bar slot="top">
-          <ion-tab-button tab="tab5">
-            <ion-icon name="today"></ion-icon>
-            <ion-label>Fridge</ion-label>
-          </ion-tab-button>
-          <ion-tab-button tab="tab6">
-            <ion-icon name="beer"></ion-icon>
-            <ion-label>Available Drinks</ion-label>
-          </ion-tab-button>
-        </ion-tab-bar>
-      </ion-tabs>
-      
- 
+<ion-content> 
+    <ion-item>
+        <ion-label>Ingredient Type</ion-label>
+        <ion-select multiple="true" cancelText="Exit" okText="Select">
+          <ion-select-option value="Alcohol">Alcohol</ion-select-option>
+          <ion-select-option value="Fruits & Vegtables">Fruits & Vegtables</ion-select-option>
+          <ion-select-option value="Herbs & Spices">Herbs & Spices</ion-select-option>
+          <ion-select-option value="Garnish">Garnish</ion-select-option>
+        </ion-select>
+    </ion-item>
+    <ion-card>
+        <ion-card-title>Alcohol</ion-card-title>
+        <ion-card-content>
+          <h3>Jack Daniels Whiskey</h3>
+          <ion-button>
+              <ion-icon name="square-outline"></ion-icon>
+          </ion-button>
+        </ion-card-content>
+        <ion-card-content>
+          <h3>Crown Royal</h3>
+          <ion-button id="Need">
+              <ion-icon name="basket"></ion-icon>
+          </ion-button>
+        </ion-card-content>
+        <ion-card-content>
+          <h3>Smirnoff Vodka</h3>
+          <ion-button id="Need">
+              <ion-icon name="basket"></ion-icon>
+          </ion-button>
+        </ion-card-content>
+      </ion-card>
+      <ion-card>
+          <ion-card-title>Fruits & Vegtables</ion-card-title>
+          <ion-card-content>
+              <h3>Lemon</h3>
+              <ion-button id="Need">
+                  <ion-icon name="basket"></ion-icon>
+              </ion-button>
+            </ion-card-content>
+            <ion-card-content>
+              <h3>Cherries</h3>
+              <ion-button id="Need">
+                  <ion-icon name="basket"></ion-icon>
+              </ion-button>
+            </ion-card-content>
+            <ion-card-content>
+              <h3>Tomato</h3>
+              <ion-button id="Need">
+                  <ion-icon name="basket"></ion-icon>
+              </ion-button>
+            </ion-card-content>
+      </ion-card>
+      <ion-card>
+          <ion-card-title>Spices & Herbs</ion-card-title>
+          <ion-card-content>
+              <h3>Ginger</h3>
+              <ion-button id="Need">
+                  <ion-icon name="basket"></ion-icon>
+              </ion-button>
+            </ion-card-content>
+            <ion-card-content>
+              <h3>Rosemary</h3>
+              <ion-button id="Need">
+                  <ion-icon name="basket"></ion-icon>
+              </ion-button>
+            </ion-card-content>
+            <ion-card-content>
+              <h3>Basil</h3>
+              <ion-button id="Need">
+                  <ion-icon name="basket"></ion-icon>
+              </ion-button>
+            </ion-card-content>
+      </ion-card>
+      <ion-card>
+          <ion-card-title>Garnish</ion-card-title>
+          <ion-card-content>
+              <h3>Shrimp</h3>
+              <ion-button id="Need">
+                  <ion-icon name="basket"></ion-icon>
+              </ion-button>
+            </ion-card-content>
+            <ion-card-content>
+              <h3>Whipped Cream</h3>
+              <ion-button id="Need">
+                  <ion-icon name="basket"></ion-icon>
+              </ion-button>
+            </ion-card-content>
+            <ion-card-content>
+              <h3>Ice</h3>
+              <ion-button id="Need">
+                  <ion-icon name="basket"></ion-icon>
+              </ion-button>
+            </ion-card-content>
+      </ion-card>
 </ion-content>
