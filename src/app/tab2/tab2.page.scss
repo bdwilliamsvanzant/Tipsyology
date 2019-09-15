@@ -1,0 +1,37 @@
+ion-header{
+    --ion-background-color:black;
+}
+ion-content{
+    --ion-background-color:silver;
+}
+ion-title{
+    text-align:center;
+    font-size: 180%;
+    color:#0047ab;
+}
+ion-card{
+    padding-top: 1rem;
+}
+ion-card-title{
+    text-align:center;
+    color:silver;
+    background-color: black;
+}
+ion-card-content{
+    text-align:center;
+}
+ion-list ion-item{
+    text-align:center;
+}
+ion-button{
+    color:silver;
+    --background:black;
+    float:right;
+}
+p{
+    color:black;
+    font-size:120%;
+}
+h2{
+    text-align: center;
+}

@@ -1,0 +1,26 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Tipsyology</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <ion-card>
+        <ion-card-title>Legal Disclaimer</ion-card-title>
+        <!--Legal disclaimer before integrating google age verification-->
+        <ion-card-content>
+          <p>You must be of legal drinking age to access this app. Tipsyology and its developers do not sell or serve any alcohol. By entering your age you affirm that you are of legal drinking age.</p>
+        </ion-card-content>
+      </ion-card>
+  <ion-list>
+    <ion-item>
+      <ion-label>Your Name: </ion-label>
+      <ion-input [(ngModel)]="userName"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Your Age: </ion-label>
+      <ion-input [(ngModel)]="age"></ion-input>
+    </ion-item>
+  </ion-list>
+  <ion-button expand="full" (click)="Login()">Login</ion-button>
+</ion-content>

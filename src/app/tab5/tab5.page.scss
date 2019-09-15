@@ -1,0 +1,50 @@
+ion-header{
+    --ion-background-color:black;
+}
+ion-content{
+    --ion-background-color:silver;
+}
+ion-title{
+    text-align:center;
+    font-size: 180%;
+    color:#0047ab;
+}
+ion-card{
+    padding-top: 1rem;
+}
+ion-card-title{
+    text-align:center;
+    color:silver;
+    background-color: black;
+}
+ion-card-content{
+    text-align:center;
+}
+ion-list ion-item{
+    text-align:center;
+}
+ion-button{
+    color:silver;
+    --background:black;
+}
+p{
+    color:black;
+    font-size:120%;
+}
+h2{
+    text-align: center;
+}
+
+#segmentlabel{
+    font-size: 1.5em;
+    text-align: center;
+    text-decoration: bold;
+    margin: auto;
+    padding-bottom: 1em;
+}
+#dropdownlabel{
+    font-size: 1em;
+    text-align: left;
+    margin-top: 10;
+    padding-top: 1em;
+}

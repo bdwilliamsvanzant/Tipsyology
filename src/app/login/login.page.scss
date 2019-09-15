@@ -1,0 +1,37 @@
+ion-header{
+    --ion-background-color:black;
+}
+ion-content{
+    --ion-background-color:silver;
+}
+ion-title{
+    text-align:center;
+    font-size: 180%;
+    color:#0047ab;
+}
+ion-card{
+    padding-top: 6rem;
+}
+ion-item{
+    padding-top: 4rem;
+}
+ion-card-title{
+    text-align:center;
+    color:silver;
+    background-color: black;
+}
+ion-card-content{
+    background-color: white;
+}
+ion-button{
+    color:#0047ab;
+    --background:black;
+    font-size:150%;
+    position: fixed;
+    left: 0;
+    bottom: 10px;
+    right: 0;
+}
+p{
+    color:black;
+}
