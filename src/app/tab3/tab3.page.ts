@@ -7,7 +7,7 @@ import { Component } from '@angular/core';
 export class Tab3Page {
   public selectedSection: String = "Ingredients";
   constructor() {}
- 
+  // event handler to select section to display
   async selectedSeg(ev){
      this.selectedSection = ev.target.id;
   }
