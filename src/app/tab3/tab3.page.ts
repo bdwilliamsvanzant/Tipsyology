@@ -5,7 +5,10 @@ import { Component } from '@angular/core';
   styleUrls: ['tab3.page.scss']
 })
 export class Tab3Page {
-  
+  public selectedSection: String = "Ingredients";
   constructor() {}
-  
+ 
+  async selectedSeg(ev){
+     this.selectedSection = ev.target.id;
+  }
 }

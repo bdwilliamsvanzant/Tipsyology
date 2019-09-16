@@ -6,33 +6,12 @@ import { FormsModule } from '@angular/forms';
 import { Tab3Page } from './tab3.page';
 
 
-const routes: Routes = [
-  {
-    path: '',
-    component: Tab3Page,
-    children: [
-      {
-        path: 'tab5',
-        loadChildren: '../tab5/tab5.module#Tab5PageModule'
-      },
-      {
-        path: 'tab6',
-        loadChildren: '../tab6/tab6.module#Tab6PageModule'
-      }
-    ]
-  },
-  {
-    path: '',
-    redirectTo: 'tab3/tab5'
-  }
-]
-
 @NgModule({
   imports: [
     IonicModule,
     CommonModule,
     FormsModule,
-    RouterModule.forChild(routes)
+    RouterModule.forChild([{ path: '', component: Tab3Page }])
   ],
   declarations: [Tab3Page]
 })

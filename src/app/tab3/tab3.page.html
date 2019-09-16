@@ -7,17 +7,138 @@
 </ion-header>
 
 <ion-content>
-    <ion-tabs selectedIndex="0">
-        <!-- Tab bar -->
-        <ion-tab-bar slot="top">
-          <ion-tab-button tab="tab5">
-            <ion-icon name="today"></ion-icon>
-            <ion-label>Ingredients</ion-label>
-          </ion-tab-button>
-          <ion-tab-button tab="tab6">
-            <ion-icon name="beer"></ion-icon>
-            <ion-label>Available Drinks</ion-label>
-          </ion-tab-button>
-        </ion-tab-bar>
-      </ion-tabs>
+  <ion-segment id="segments">
+    <ion-segment-button id="Ingredients" (click)="selectedSeg($event)">
+      <ion-label id="Ingredients">Ingredients</ion-label>
+    </ion-segment-button>
+    <ion-segment-button id="Available" (click)="selectedSeg($event)">
+      <ion-label id="Available">Available drinks</ion-label>
+    </ion-segment-button>
+  </ion-segment>
+  <div *ngIf="selectedSection == 'Ingredients'">
+    <ion-item>
+      <ion-label>Ingredient Type</ion-label>
+      <ion-select multiple="true" cancelText="Exit" okText="Select">
+        <ion-select-option value="Alcohol">Alcohol</ion-select-option>
+        <ion-select-option value="Fruits & Vegtables">Fruits & Vegtables</ion-select-option>
+        <ion-select-option value="Herbs & Spices">Herbs & Spices</ion-select-option>
+          <ion-select-option value="Garnish">Garnish</ion-select-option>
+      </ion-select>
+    </ion-item>
+    <ion-card>
+      <ion-card-title>Alcohol</ion-card-title>
+      <ion-card-content>
+        <h3>Jack Daniels</h3>
+        <ion-button>+</ion-button>
+      </ion-card-content>
+      <ion-card-content>
+        <h3>Crown Royal</h3>
+       <ion-button>+</ion-button>
+      </ion-card-content>
+      <ion-card-content>
+        <h3>Smirnoff Vodka</h3>
+       <ion-button>+</ion-button>
+      </ion-card-content>
+    </ion-card>
+    <ion-card>
+      <ion-card-title>Fruits & Vegtables</ion-card-title>
+      <ion-card-content>
+        <h3>Lemon</h3>
+       <ion-button>+</ion-button>
+      </ion-card-content>
+      <ion-card-content>
+        <h3>Cherries</h3>
+       <ion-button>+</ion-button>
+      </ion-card-content>
+      <ion-card-content>
+        <h3>Tomato</h3>
+       <ion-button>+</ion-button>
+      </ion-card-content>
+    </ion-card>
+    <ion-card>
+      <ion-card-title>Spices & Herbs</ion-card-title>
+      <ion-card-content>
+        <h3>Ginger</h3>
+       <ion-button>+</ion-button>
+      </ion-card-content>
+      <ion-card-content>
+        <h3>Rosemary</h3>
+       <ion-button>+</ion-button>
+      </ion-card-content>
+      <ion-card-content>
+        <h3>Basil</h3>
+       <ion-button>+</ion-button>
+      </ion-card-content>
+    </ion-card>
+    <ion-card>
+      <ion-card-title>Garnish</ion-card-title>
+      <ion-card-content>
+        <h3>Shrimp</h3>
+       <ion-button>+</ion-button>
+      </ion-card-content>
+      <ion-card-content>
+        <h3>Whipped Cream</h3>
+       <ion-button>+</ion-button>
+      </ion-card-content>
+      <ion-card-content>
+        <h3>Ice</h3>
+       <ion-button>+</ion-button>
+      </ion-card-content>
+    </ion-card>
+  </div>
+  <div *ngIf="selectedSection == 'Available'">
+    <ion-item>
+      <ion-label>Drinks</ion-label>
+      <ion-select multiple="true" cancelText="Exit" okText="Select">
+        <ion-select-option value="Vodka">Vodka</ion-select-option>
+        <ion-select-option value="Gin">Gin</ion-select-option>
+        <ion-select-option value="Rum">Rum</ion-select-option>
+      </ion-select>
+    </ion-item>
+    <ion-card>
+      <ion-card-title>Jack and Coke</ion-card-title>
+      <ion-card-content>
+          <h3>2 oz Jack Daniels no. 21 orignal</h3>
+          <ion-button>+</ion-button>
+      </ion-card-content>
+      <ion-card-content>
+        <h3>10 oz of Coca-Cola</h3>
+        <ion-button>+</ion-button>
+      </ion-card-content>
+    </ion-card>
+    <ion-card>
+      <ion-card-title>Old Fashioned</ion-card-title>
+      <ion-card-content>
+        <h3>1 1/2 oz Bourbon or Rye whiskey</h3>
+        <ion-button>+</ion-button>
+      </ion-card-content>
+      <ion-card-content>
+        <h3>2 dashes Angostura bitters</h3>
+        <ion-button>+</ion-button>
+      </ion-card-content>
+      <ion-card-content>
+        <h3>1 sugar cube</h3>
+        <ion-button>+</ion-button>
+      </ion-card-content>
+      <ion-card-content>
+        <h3>Orange peel</h3>
+        <ion-button>+</ion-button>
+      </ion-card-content>
+    </ion-card>
+    <ion-card>
+      <ion-card-title>The Whiskey Ginger</ion-card-title>
+      <ion-card-content>
+        <h3>2 oz Jack Daniels no. 21 orignal</h3>
+        <ion-button>+</ion-button>
+      </ion-card-content>
+      <ion-card-content>
+        <h3>10 oz Ginger Ale</h3>
+        <ion-button>+</ion-button>
+      </ion-card-content>
+      <ion-card-content>
+        <h3>Lemon twist</h3>
+        <ion-button>+</ion-button>
+      </ion-card-content>
+    </ion-card>
+  </div>
 </ion-content>
