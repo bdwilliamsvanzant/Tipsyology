@@ -48,20 +48,15 @@
   <ion-card>
       <ion-card-title>Random Drink</ion-card-title>
       <ion-card-content>
-        <ion-button id="randomizer" (click)="randButtonClicked()">Randomizer</ion-button>
-        <ion-title id="RandDrinkName">The Whiskey Ginger</ion-title>
-        <ion-list id="RandDrinkIngredients">
-          <ion-item>
-            2 oz Jack Daniels no. 21 orignal
-          </ion-item>
-          <ion-item>
-            10 oz Ginger Ale
-          </ion-item>
-          <ion-item>
-            Lemon twist
-          </ion-item>
+        <ion-title id="RandDrinkName">{{ randName }}</ion-title>
+        <img src="{{ randImg }} " alt="">
+        <div *ngFor="let ing of ingredients">
+          <ion-list id="RandDrinkIngredients" *ngIf="ing[0] != null">
+          <ion-item> {{ ing[0] }} {{ ing[1] }}</ion-item>
         </ion-list>
-        <p id="RandDrinkDirections">In a 16 ounce cup pour the 2 ounces of Jack Daniels over ice, then top with Ginger Ale and stir with a straw. Garnish with a lemon twist from a lemon peel.</p>
+        </div>
+        <p id="RandDrinkDirections">{{ directions }}</p>
+        <ion-button id="randomizer" (click)="randomDrink()">Randomizer</ion-button>
       </ion-card-content>
   </ion-card>
 </ion-content>

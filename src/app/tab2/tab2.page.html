@@ -16,65 +16,10 @@
         <ion-select-option value="Rum">Rum</ion-select-option>
       </ion-select>
     </ion-item>
-    <ion-card>
-        <ion-card-title>Jack and Coke</ion-card-title>
-        <ion-button>
-            <ion-icon name="star"></ion-icon>
-        </ion-button>
-        <ion-card-content>
-          <ion-list>
-            <ion-item>
-              2 oz Jack Daniels no. 21 orignal
-            </ion-item>
-            <ion-item>
-              10 oz Coca-Cola
-            </ion-item>
-          </ion-list>
-          <p >In a 16 ounce cup pour the 2 ounces of Jack Daniels over ice, then top with Coca-Cola and stir with a straw.</p>
-        </ion-card-content>
-      </ion-card>
-      <ion-card>
-          <ion-card-title>Old Fashioned</ion-card-title>
-          <ion-button>
-              <ion-icon name="star-outline"></ion-icon>
-          </ion-button>
-          <ion-card-content>
-              <ion-list>
-                <ion-item>
-                  1 1/2 oz Bourbon or Rye whiskey
-                </ion-item>
-                <ion-item>
-                  2 dashes Angostura bitters
-                </ion-item>
-                <ion-item>
-                  1 sugar cube
-                </ion-item>
-                <ion-item>
-                  Orange peel
-                </ion-item>
-              </ion-list>
-              <p >Place sugar cube in old fashioned glass and saturate with bitters, add a dash of plain water. Muddle until dissolved. Fill the glass with ice cubes and add whiskey. Garnish with orange slice.</p>
-            </ion-card-content>
-      </ion-card>
-      <ion-card>
-          <ion-card-title>The Whiskey Ginger</ion-card-title>
-          <ion-button>
-              <ion-icon name="star-outline"></ion-icon>
-          </ion-button>
-          <ion-card-content>
-            <ion-list>
-              <ion-item>
-                2 oz Jack Daniels no. 21 orignal
-              </ion-item>
-              <ion-item>
-                10 oz Ginger Ale
-              </ion-item>
-              <ion-item>
-                Lemon twist
-              </ion-item>
-            </ion-list>
-            <p>In a 16 ounce cup pour the 2 ounces of Jack Daniels over ice, then top with Ginger Ale and stir with a straw. Garnish with a lemon twist from a lemon peel.</p>
-          </ion-card-content>
-      </ion-card>
-
-</ion-content>
+    <div *ngFor="let named of names">
+      <p> {{ named[0] }}</p>
+      <img src="{{ named[1] }}" alt="">
+    </div>
+    
+    
+ </ion-content>
