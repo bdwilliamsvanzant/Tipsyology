@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { drink } from './interfaces/drink.interface';
 import { details } from './interfaces/details.interface';
 import { key } from './apikey';

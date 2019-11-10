@@ -25,16 +25,24 @@
     </ion-card-content>
   </ion-card>
   <ion-card>
-      <ion-card-title>Recently Added</ion-card-title>
+      <ion-card-title>Drink of The Day</ion-card-title>
       <ion-card-content>
-          <ion-title id="RecentDrinkName"> {{ recName }} </ion-title>
-          <img src="{{ recImg }} " alt="">
-          <div *ngFor="let ing of recIngredients">
-            <ion-list id="RecentDrinkIngredients" *ngIf="ing[0] != null">
-              <ion-item> {{ ing[0] }} {{ ing[1] }}</ion-item>
-            </ion-list>
-          </div>
-          <p id="RecentDrinkDirections">{{ recDirections }}</p>
+          <ion-title id="DailyDrinkName">Old Fashioned</ion-title>
+          <ion-list id="DailyDrinkIngredients">
+            <ion-item>
+              1 1/2 oz Bourbon or Rye whiskey
+            </ion-item>
+            <ion-item>
+              2 dashes Angostura bitters
+            </ion-item>
+            <ion-item>
+              1 sugar cube
+            </ion-item>
+            <ion-item>
+              Orange peel
+            </ion-item>
+          </ion-list>
+          <p id="DailyDrinkDirections">Place sugar cube in old fashioned glass and saturate with bitters, add a dash of plain water. Muddle until dissolved. Fill the glass with ice cubes and add whiskey. Garnish with orange slice.</p>
         </ion-card-content>
   </ion-card>
   <ion-card>
@@ -42,12 +50,12 @@
       <ion-card-content>
         <ion-title id="RandDrinkName">{{ randName }}</ion-title>
         <img src="{{ randImg }} " alt="">
-        <div *ngFor="let ing of randIngredients">
+        <div *ngFor="let ing of ingredients">
           <ion-list id="RandDrinkIngredients" *ngIf="ing[0] != null">
           <ion-item> {{ ing[0] }} {{ ing[1] }}</ion-item>
         </ion-list>
         </div>
-        <p id="RandDrinkDirections">{{ randDirections }}</p>
+        <p id="RandDrinkDirections">{{ directions }}</p>
         <ion-button id="randomizer" (click)="randomDrink()">Randomizer</ion-button>
       </ion-card-content>
   </ion-card>
