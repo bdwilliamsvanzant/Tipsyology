@@ -6,24 +6,8 @@
   </ion-toolbar>
 </ion-header>
 
-<!--Drink values are hard coded until api integration-->
 <ion-content>
   <h2>Welcome, {{name}}!</h2>
-  <ion-card>
-    <ion-card-title>Your Favorite Drink</ion-card-title>
-    <ion-card-content>
-      <ion-title id="FavDrinkName">Jack and Coke</ion-title>
-      <ion-list id="FavDrinkIngredients">
-        <ion-item>
-          2 oz Jack Daniels no. 21 orignal
-        </ion-item>
-        <ion-item>
-          10 oz Coca-Cola
-        </ion-item>
-      </ion-list>
-      <p id="FavDrinkDirections">In a 16 ounce cup pour the 2 ounces of Jack Daniels over ice, then top with Coca-Cola and stir with a straw.</p>
-    </ion-card-content>
-  </ion-card>
   <ion-card>
       <ion-card-title>Recently Added</ion-card-title>
       <ion-card-content>
@@ -44,8 +28,8 @@
         <img src="{{ randImg }} " alt="">
         <div *ngFor="let ing of randIngredients">
           <ion-list id="RandDrinkIngredients" *ngIf="ing[0] != null">
-          <ion-item> {{ ing[0] }} {{ ing[1] }}</ion-item>
-        </ion-list>
+            <ion-item> {{ ing[0] }} {{ ing[1] }}</ion-item>
+          </ion-list>
         </div>
         <p id="RandDrinkDirections">{{ randDirections }}</p>
         <ion-button id="randomizer" (click)="randomDrink()">Randomizer</ion-button>

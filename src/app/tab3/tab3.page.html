@@ -5,140 +5,58 @@
     </ion-title>
   </ion-toolbar>
 </ion-header>
-<!--content will be generated from api and stored in local storage, available drinks will only have buttons to add for ingredients not in fridge colored in blue  -->
 <ion-content>
-  <ion-segment id="segments">
-    <ion-segment-button id="Ingredients" (click)="selectedSeg($event)">
-      <ion-label id="Ingredients">Ingredients</ion-label>
-    </ion-segment-button>
-    <ion-segment-button id="Available" (click)="selectedSeg($event)">
-      <ion-label id="Available">Available drinks</ion-label>
-    </ion-segment-button>
-  </ion-segment>
-  <div *ngIf="selectedSection == 'Ingredients'">
-    <ion-item>
-      <ion-label>Ingredient Type</ion-label>
-      <ion-select multiple="true" cancelText="Exit" okText="Select">
-        <ion-select-option value="Alcohol">Alcohol</ion-select-option>
-        <ion-select-option value="Fruits & Vegtables">Fruits & Vegtables</ion-select-option>
-        <ion-select-option value="Herbs & Spices">Herbs & Spices</ion-select-option>
-          <ion-select-option value="Garnish">Garnish</ion-select-option>
-      </ion-select>
-    </ion-item>
-    <ion-card>
-      <ion-card-title>Alcohol</ion-card-title>
-      <ion-card-content>
-        <h3>Jack Daniels</h3>
-        <ion-button>+</ion-button>
-      </ion-card-content>
-      <ion-card-content>
-        <h3>Crown Royal</h3>
-       <ion-button>+</ion-button>
-      </ion-card-content>
-      <ion-card-content>
-        <h3>Smirnoff Vodka</h3>
-       <ion-button>+</ion-button>
-      </ion-card-content>
-    </ion-card>
-    <ion-card>
-      <ion-card-title>Fruits & Vegtables</ion-card-title>
-      <ion-card-content>
-        <h3>Lemon</h3>
-       <ion-button>+</ion-button>
-      </ion-card-content>
-      <ion-card-content>
-        <h3>Cherries</h3>
-       <ion-button>+</ion-button>
-      </ion-card-content>
-      <ion-card-content>
-        <h3>Tomato</h3>
-       <ion-button>+</ion-button>
-      </ion-card-content>
-    </ion-card>
-    <ion-card>
-      <ion-card-title>Spices & Herbs</ion-card-title>
-      <ion-card-content>
-        <h3>Ginger</h3>
-       <ion-button>+</ion-button>
-      </ion-card-content>
-      <ion-card-content>
-        <h3>Rosemary</h3>
-       <ion-button>+</ion-button>
-      </ion-card-content>
-      <ion-card-content>
-        <h3>Basil</h3>
-       <ion-button>+</ion-button>
-      </ion-card-content>
-    </ion-card>
-    <ion-card>
-      <ion-card-title>Garnish</ion-card-title>
-      <ion-card-content>
-        <h3>Shrimp</h3>
-       <ion-button>+</ion-button>
-      </ion-card-content>
-      <ion-card-content>
-        <h3>Whipped Cream</h3>
-       <ion-button>+</ion-button>
-      </ion-card-content>
-      <ion-card-content>
-        <h3>Ice</h3>
-       <ion-button>+</ion-button>
-      </ion-card-content>
-    </ion-card>
-  </div>
-  <div *ngIf="selectedSection == 'Available'">
-    <ion-item>
-      <ion-label>Drinks</ion-label>
-      <ion-select multiple="true" cancelText="Exit" okText="Select">
-        <ion-select-option value="Vodka">Vodka</ion-select-option>
-        <ion-select-option value="Gin">Gin</ion-select-option>
-        <ion-select-option value="Rum">Rum</ion-select-option>
-      </ion-select>
-    </ion-item>
-    <ion-card>
-      <ion-card-title>Jack and Coke</ion-card-title>
-      <ion-card-content>
-          <h3>2 oz Jack Daniels no. 21 orignal</h3>
-          <ion-button>+</ion-button>
-      </ion-card-content>
-      <ion-card-content>
-        <h3>10 oz of Coca-Cola</h3>
-        <ion-button>+</ion-button>
-      </ion-card-content>
-    </ion-card>
-    <ion-card>
-      <ion-card-title>Old Fashioned</ion-card-title>
-      <ion-card-content>
-        <h3>1 1/2 oz Bourbon or Rye whiskey</h3>
-        <ion-button>+</ion-button>
-      </ion-card-content>
-      <ion-card-content>
-        <h3>2 dashes Angostura bitters</h3>
-        <ion-button>+</ion-button>
-      </ion-card-content>
-      <ion-card-content>
-        <h3>1 sugar cube</h3>
-        <ion-button>+</ion-button>
-      </ion-card-content>
-      <ion-card-content>
-        <h3>Orange peel</h3>
-        <ion-button>+</ion-button>
-      </ion-card-content>
-    </ion-card>
-    <ion-card>
-      <ion-card-title>The Whiskey Ginger</ion-card-title>
-      <ion-card-content>
-        <h3>2 oz Jack Daniels no. 21 orignal</h3>
-        <ion-button>+</ion-button>
-      </ion-card-content>
-      <ion-card-content>
-        <h3>10 oz Ginger Ale</h3>
-        <ion-button>+</ion-button>
-      </ion-card-content>
-      <ion-card-content>
-        <h3>Lemon twist</h3>
-        <ion-button>+</ion-button>
-      </ion-card-content>
-    </ion-card>
-  </div>
+    <ion-searchbar #vals placeholder="ingredient" searchIcon="search" (search)="ingSearch(vals.value)"></ion-searchbar>
+    <form action="">
+        <div *ngFor="let bev of bevs">
+          <div *ngIf="bev[0] != ''">
+            <div>
+              <p>{{ bev[0] }}</p> 
+            </div>
+            <img src="{{ bev[1] }}" alt="">
+            <div>
+              <h3>Ingredients: </h3>
+              <br>
+              <br>
+              <div *ngIf="bev[3][2] != ''">
+                <p > {{bev[3][1]}}  {{bev[3][2]}} </p>
+              </div>
+              <div *ngIf="bev[4][2] != ''">
+                  <p > {{bev[4][1]}}  {{bev[4][2]}} </p>
+              </div>
+              <div *ngIf="bev[5][2] != ''">
+                <p > {{bev[5][1]}}  {{bev[5][2]}} </p>
+              </div>
+              <div *ngIf="bev[6][2] != ''">
+                <p> {{bev[6][1]}}  {{bev[6][2]}} </p>
+              </div>
+              <div *ngIf="bev[7][2] != ''">
+                <p> {{bev[7][1]}}  {{bev[7][2]}} </p>
+              </div>
+              <div *ngIf="bev[8][2] != ''">
+                <p> {{bev[8][1]}}  {{bev[8][2]}} </p>
+              </div>
+              <div *ngIf="bev[9][2] != ''">
+                <p> {{bev[9][1]}}  {{bev[9][2]}} </p>
+              </div>
+              <div *ngIf="bev[10][2] != ''">
+                <p> {{bev[10][1]}}  {{bev[10][2]}} </p>
+              </div>
+              <div *ngIf="bev[11][2] != ''">
+                <p> {{bev[11][1]}}  {{bev[11][2]}} </p>
+              </div>
+              <div *ngIf="bev[12][2] != ''">
+                <p> {{bev[12][1]}}  {{bev[12][2]}} </p>
+              </div>
+              <div *ngIf="bev[13][2] != ''">
+                <p> {{bev[13][1]}}  {{bev[13][2]}} </p>
+              </div>
+              <div *ngIf="bev[14][2] != ''">
+                <p> {{bev[14][1]}}  {{bev[14][2]}} </p>
+              </div>
+              <hr>
+            </div>
+          </div>
+        </div>
+      </form>
 </ion-content>

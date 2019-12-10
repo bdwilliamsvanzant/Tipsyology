@@ -16,10 +16,54 @@
         <ion-select-option value="Rum">Rum</ion-select-option>
       </ion-select>
     </ion-item>
-    <div *ngFor="let named of names">
-      <p> {{ named[0] }}</p>
-      <img src="{{ named[1] }}" alt="">
+    <form action="">
+    <div *ngFor="let bev of bevs">
+      <div *ngIf="bev[0] != ''">
+        <div>
+          <p>{{ bev[0] }}</p> 
+        </div>
+        <img src="{{ bev[1] }}" alt="">
+        <div>
+          <h3>Ingredients: </h3>
+          <div *ngIf="bev[3][2] != ''">
+            <p > {{bev[3][1]}}  {{bev[3][2]}} </p>
+          </div>
+          <div *ngIf="bev[4][2] != ''">
+              <p > {{bev[4][1]}}  {{bev[4][2]}} </p>
+          </div>
+          <div *ngIf="bev[5][2] != ''">
+            <p > {{bev[5][1]}}  {{bev[5][2]}} </p>
+          </div>
+          <div *ngIf="bev[6][2] != ''">
+            <p> {{bev[6][1]}}  {{bev[6][2]}} </p>
+          </div>
+          <div *ngIf="bev[7][2] != ''">
+            <p> {{bev[7][1]}}  {{bev[7][2]}} </p>
+          </div>
+          <div *ngIf="bev[8][2] != ''">
+            <p> {{bev[8][1]}}  {{bev[8][2]}} </p>
+          </div>
+          <div *ngIf="bev[9][2] != ''">
+            <p> {{bev[9][1]}}  {{bev[9][2]}} </p>
+          </div>
+          <div *ngIf="bev[10][2] != ''">
+            <p> {{bev[10][1]}}  {{bev[10][2]}} </p>
+          </div>
+          <div *ngIf="bev[11][2] != ''">
+            <p> {{bev[11][1]}}  {{bev[11][2]}} </p>
+          </div>
+          <div *ngIf="bev[12][2] != ''">
+            <p> {{bev[12][1]}}  {{bev[12][2]}} </p>
+          </div>
+          <div *ngIf="bev[13][2] != ''">
+            <p> {{bev[13][1]}}  {{bev[13][2]}} </p>
+          </div>
+          <div *ngIf="bev[14][2] != ''">
+            <p> {{bev[14][1]}}  {{bev[14][2]}} </p>
+          </div>
+          <hr>
+        </div>
+      </div>
     </div>
-    
-    
+  </form>
  </ion-content>

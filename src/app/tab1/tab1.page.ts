@@ -42,25 +42,12 @@ export class Tab1Page {
   }
   recentDrink(){
     this.rec.getRecentDrink().subscribe(data =>{
-      console.log(data);
       this.recName = data.drinks[0].strDrink;
       this.recImg = data.drinks[0].strDrinkThumb;
       this.recIngredients = [[null,null]];
       this.recIngredients.push([data.drinks[0].strMeasure1,data.drinks[0].strIngredient1]);
       this.recIngredients.push([data.drinks[0].strMeasure2,data.drinks[0].strIngredient2]);
       this.recIngredients.push([data.drinks[0].strMeasure3,data.drinks[0].strIngredient3]);
-      this.recIngredients.push([data.drinks[0].strMeasure4,data.drinks[0].strIngredient4]);
-      this.recIngredients.push([data.drinks[0].strMeasure5,data.drinks[0].strIngredient5]);
-      this.recIngredients.push([data.drinks[0].strMeasure6,data.drinks[0].strIngredient6]);
-      this.recIngredients.push([data.drinks[0].strMeasure7,data.drinks[0].strIngredient7]);
-      this.recIngredients.push([data.drinks[0].strMeasure8,data.drinks[0].strIngredient8]);
-      this.recIngredients.push([data.drinks[0].strMeasure9,data.drinks[0].strIngredient9]);
-      this.recIngredients.push([data.drinks[0].strMeasure10,data.drinks[0].strIngredient10]);
-      this.recIngredients.push([data.drinks[0].strMeasure11,data.drinks[0].strIngredient11]);
-      this.recIngredients.push([data.drinks[0].strMeasure12,data.drinks[0].strIngredient12]);
-      this.recIngredients.push([data.drinks[0].strMeasure13,data.drinks[0].strIngredient13]);
-      this.recIngredients.push([data.drinks[0].strMeasure14,data.drinks[0].strIngredient14]);
-      this.recIngredients.push([data.drinks[0].strMeasure15,data.drinks[0].strIngredient15]);  
       this.recDirections =data.drinks[0].strInstructions;
     })
   }
